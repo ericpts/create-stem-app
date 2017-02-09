@@ -1,6 +1,6 @@
 ## Create stem app
 
-This is a utility used to create a basic stem app.
+This is a utility used to create a basic [stem](http://stemjs.org/) app.
 
 #### Basic usage
 
