@@ -1,0 +1,21 @@
+{
+  "name": "create-stem-app",
+  "version": "1.0.0",
+  "description": "Create a basic stem application",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericpts/create-stem-app.git"
+  },
+  "bin": {
+    "create-stem-app": "./create.py"
+  },
+  "keywords": [
+    "stem"
+  ],
+  "author": "Eric P. Stavarache",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/ericpts/create-stem-app/issues"
+  },
+  "homepage": "https://github.com/ericpts/create-stem-app#readme"
+}
