@@ -1,7 +1,10 @@
-## Create stemjs app
+## Create stem app
 
 This is a utility used to create a basic stem app.
 
-#### Usage
+#### Basic usage
 
-`create-stem-app <project_dir> `
+```bash
+npm install -g create-stem-app
+create-stem-app app
+```
