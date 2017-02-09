@@ -15,7 +15,7 @@ def main():
     project_dir = args.project_dir
 
     if os.path.exists(project_dir):
-        print("Directory {} already exists!", project_dir)
+        print("Directory {} already exists!".format(project_dir))
         return -1
 
     print("Importing skeleton from {}\n".format(skeleton_repo))
