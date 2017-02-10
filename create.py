@@ -5,11 +5,13 @@ import shutil
 import argparse
 import subprocess
 
-skeleton_repo = "https://github.com/mciucu/stemjs-demo"
+base_skeleton_repo = "https://github.com/mciucu/stemjs-demo"
+express_skeleton_repo = "https://github.com/ericpts/stemjs-demo"
 
 def main():
     parser = argparse.ArgumentParser(description='Create simple stemjs app')
     parser.add_argument('project_dir', metavar='<project-directory>')
+    parser.add_argument('-e', '--express', help='Use express as server backend', action='store_true')
 
     args = parser.parse_args()
     project_dir = args.project_dir
@@ -17,6 +19,8 @@ def main():
     if os.path.exists(project_dir):
         print("Directory {} already exists!".format(project_dir))
         return -1
+
+    skeleton_repo = express_skeleton_repo if args.express else base_skeleton_repo
 
     print("Importing skeleton from {}\n".format(skeleton_repo))
     subprocess.check_call(['git', 'clone', skeleton_repo, project_dir])
