@@ -53,9 +53,8 @@ def main():
     print("Installing requirements with npm\n")
     subprocess.check_call(['npm', 'update'], cwd=project_dir)
 
-    print("Compiling using rollup... ", end='', flush=True)
-    subprocess.check_call(['rollup', '-c'], cwd="{}/src".format(project_dir), stdout=open(os.devnull, "w"))
-    print("OK")
+    print("Compiling\n", end='', flush=True)
+    subprocess.check_call(['npm', 'run-script', 'build'], cwd=project_dir)
 
     print("\nSuccessfully created project {} at {}".format(colorize(project_dir), colorize(os.path.abspath(project_dir))))
     print("Check out the README located there")
@@ -63,8 +62,8 @@ def main():
     print("\tnpm start")
     print("\t\tto start a simple development server\n")
 
-    print("\tcd src; rollup -c --watch")
-    print("\t\tto start rollup\n")
+    print("\tnpm run-script watch")
+    print("\t\tto watch for changes and recompile\n")
 
     print("Also try {} --help for more options (such as express or django backend)".format(sys.argv[0]))
 
