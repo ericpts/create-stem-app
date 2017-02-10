@@ -21,7 +21,7 @@ def main():
     backend = parser.add_mutually_exclusive_group()
     backend.add_argument('-e', '--express', help='Use Express as server backend', action='store_true')
     backend.add_argument('-d', '--django', help='Use Django as server backend', action='store_true')
-    backend.add_argument('-s', '--simple', help='Use SimpleHTTPServer as server backend', action='store_true')
+    backend.add_argument('-s', '--simple', help='Use SimpleHTTPServer as server backend (default)', action='store_true')
 
     args = parser.parse_args()
     project_dir = args.project_dir
