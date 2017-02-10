@@ -43,7 +43,7 @@ def main():
     print("Importing skeleton with {}\n".format(skeleton_type))
 
     subprocess.check_call(['git', 'clone', skeleton_repo, project_dir])
-    subprocess.check_call(['git', 'checkout', skeleton_branch])
+    subprocess.check_call(['git', 'checkout', skeleton_branch], cwd=project_dir)
 
     shutil.rmtree('{}/.git'.format(project_dir))
 
