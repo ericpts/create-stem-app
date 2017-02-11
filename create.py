@@ -48,7 +48,7 @@ def main():
     shutil.rmtree('{}/.git'.format(project_dir))
 
     print("Globally installing {}\n".format(", ".join(map(colorize, global_requirements))))
-    subprocess.check_call(['sudo', 'npm', 'install', '-g', *global_requirements])
+    subprocess.check_call(['sudo', 'npm', 'install', '-g'] +  global_requirements)
 
     print("Installing requirements with npm\n")
     subprocess.check_call(['npm', 'update'], cwd=project_dir)
